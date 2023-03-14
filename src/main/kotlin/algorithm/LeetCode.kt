@@ -70,19 +70,21 @@ class LeetCode() {
 
     fun lengthOfLongestSubstring(){
         val s: String = "abcabcbb"
-        val tempCharArray: CharArray = CharArray(s.length)
+        println("text is => $s")
+        var start = 0
+        var maxLength = 0
 
-        for(idx in s.)
-        for(char: Char in s){
-            if(tempCharArray.isNotEmpty()){
-                tempCharArray.any { c -> c != char }
-                    .apply { tempCharArray[tempIdx] = char }
-            } else{
-                tempCharArray[tempIdx] = char
+        for (i in s.indices) {
+            val c = s[i]
+
+            if (s.substring(start, i).contains(c)) {
+                start = s.indexOf(c, start) + 1
             }
 
-            //println("char => ${char}")
+            maxLength = maxOf(maxLength, i - start + 1)
         }
+
+        print("maxLength => $maxLength")
     }
 
 }
