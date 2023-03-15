@@ -14,6 +14,7 @@ fun main(args: Array<String>) {
             1 -> leetCode.twoSum()
             2 -> leetCode.addTwoNums()
             3 -> leetCode.lengthOfLongestSubstring()
+            4 -> leetCode.medianOfTwoSortedArrays()
         }
     }
 

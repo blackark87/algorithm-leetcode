@@ -69,7 +69,7 @@ class LeetCode() {
     }
 
     fun lengthOfLongestSubstring(){
-        val s: String = "abcabcbb"
+        val s = "abcabcbb"
         println("text is => $s")
         var start = 0
         var maxLength = 0
@@ -85,6 +85,22 @@ class LeetCode() {
         }
 
         print("maxLength => $maxLength")
+    }
+
+    fun medianOfTwoSortedArrays(){
+        val firstArray = intArrayOf(1, 3)
+        val secondArray = intArrayOf(2, 7)
+        val mergedArray = (firstArray + secondArray).sortedArray()
+
+        val midIndex = mergedArray.size / 2
+        val median = if (mergedArray.size % 2 == 0) {
+            (mergedArray[midIndex - 1] + mergedArray[midIndex]) / 2.0
+        } else {
+            mergedArray[midIndex].toDouble()
+        }
+
+        print(median)
+
     }
 
 }
